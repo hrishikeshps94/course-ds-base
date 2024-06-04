@@ -98,7 +98,7 @@ stages:
             logreg:
               param_grid:
                 C:
-                - 0.001
+                - 0.1
                 max_iter:
                 - 100
                 solver:
@@ -122,7 +122,7 @@ stages:
     outs:
     - path: models/model.joblib
       hash: md5
-      md5: b35ac26364e295670bcc1d70efa32073
+      md5: 1a2fc43001f31012ede12dd193c86d5e
       size: 3075
   evaluate:
     cmd: python src/stages/evaluate.py --config=params.yaml
@@ -133,7 +133,7 @@ stages:
       size: 1492
     - path: models/model.joblib
       hash: md5
-      md5: b35ac26364e295670bcc1d70efa32073
+      md5: 1a2fc43001f31012ede12dd193c86d5e
       size: 3075
     - path: src/stages/evaluate.py
       hash: md5
@@ -151,9 +151,9 @@ stages:
     outs:
     - path: reports/confusion_matrix.png
       hash: md5
-      md5: 75ff7a72bc3ea7e29499e339e3b3f817
-      size: 24999
+      md5: 4a944e2b48ace71bcc275de050584b2a
+      size: 24920
     - path: reports/metrics.json
       hash: md5
-      md5: d533847a0ca14ca93752b1b1f1df349e
-      size: 32
+      md5: 3329ba1a6b18407f725a1e25a5500560
+      size: 17
