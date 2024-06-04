@@ -21,7 +21,7 @@ data_split:
 
 train:
 
-  cv: 3
+  cv: 5
   estimator_name: logreg
   estimators:
     logreg: # sklearn.linear_model.LogisticRegression
